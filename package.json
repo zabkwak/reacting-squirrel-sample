@@ -1,0 +1,28 @@
+{
+  "name": "reacting-squirrel-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create_index": "run-script-os",
+    "create_index:win32": "echo require('./dist'); > index.js",
+    "create_index:linux:darwin": "echo \"require('./dist');\" > index.js",
+    "build": "./node_modules/.bin/babel ./src --out-dir ./dist && npm run create_index",
+    "start": "rm -rf ./dist && npm run build && node index.js"
+  },
+  "author": "Lukáš Mačuda <lukas.macuda@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.3.2",
+    "reacting-squirrel": "^0.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "run-script-os-fix": "^1.0.4"
+  }
+}
