@@ -4,6 +4,7 @@ import User from './user';
 
 const app = new Server({
     dev: true,
+    cookieSecret: 'rs-sample',
 });
 
 app.get('/', 'page', 'Page');
