@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import Server from 'reacting-squirrel/server';
 
 import User from './user';

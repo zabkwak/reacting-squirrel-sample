@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Page } from 'reacting-squirrel';
 
+import User from './components/user.tsx';
+
 import './page.css';
 import './page.scss';
 
@@ -27,7 +29,7 @@ export default class PageComponent extends Page {
         return (
             <div>
                 <h1>Page</h1>
-                <h2>{user ? user.name : '...'}</h2>
+                <User user={user} />
             </div>
         );
     }
